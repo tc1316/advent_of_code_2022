@@ -3,19 +3,14 @@
 # 1 (user wins)
 # 2 (computer wins)
 
-# Outcomes:
-# X = loss
-# Y = draw
-# Z = win
+LOSS = 2
+DRAW = 0
+WIN = 1
 
-# Score bonuses
-# Lose: 0
-# Tie: 3
-# Win: 6
 
 replacements = {"A": 1, "B": 2, "C": 3}
-game_outcomes = {"X": 2, "Y": 0, "Z": 1}
-score_bonus = {2: 0, 0: 3, 1: 6}
+game_outcomes = {"X": LOSS, "Y": DRAW, "Z": WIN}
+score_bonus = {LOSS: 0, DRAW: 3, WIN: 6}
 
 
 def calculate_player_score(enemy_choice: int, game_result: int):
