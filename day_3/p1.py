@@ -27,7 +27,6 @@ with open('./input.txt') as f:
             p1 += 1
             p2 -= 1
         common_char = first_set.intersection(second_set)
-        if len(common_char):
-            VALUE += get_priority_value(common_char.pop())
+        VALUE += get_priority_value(common_char.pop())
         line = f.readline().strip()
     print(VALUE)
