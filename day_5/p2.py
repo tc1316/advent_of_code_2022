@@ -13,9 +13,10 @@ def parse_moves(moves: str):
 
 def move_crates(stacks: list[list[str]], moves: tuple[int, int, int]):
     quantity_to_move, move_from, move_to = moves[0], moves[1]-1, moves[2]-1
-
+    popped_crates = []
     for _ in range(quantity_to_move):
-        stacks[move_to].append(stacks[move_from].pop())
+        popped_crates.append(stacks[move_from].pop())
+    stacks[move_to] = stacks[move_to] + popped_crates[::-1]
 
 
 with open('./input_instructions.txt') as f:
