@@ -4,7 +4,6 @@ with open("./input.txt") as f:
     markers = set()
     c = 1
     for char in line:
-
         if char not in markers:
             markers.add(char)
             if len(markers) == 4:
